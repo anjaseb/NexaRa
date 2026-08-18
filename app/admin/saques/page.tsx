@@ -20,7 +20,7 @@ export default async function SaquesPage() {
       <table>
         <thead><tr><th>Usuário</th><th>Valor</th><th>Pedido em</th><th></th></tr></thead>
         <tbody>
-          {saques?.map((s) => {
+          {saques?.map((s: any) => {
             const horasDesdeOPedido = (Date.now() - new Date(s.requested_at).getTime()) / 3_600_000;
             const dentroDaJanela = horasDesdeOPedido < 24;
             return (

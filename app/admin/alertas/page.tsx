@@ -50,7 +50,7 @@ export default async function AlertasPage() {
           <table>
             <thead><tr><th>Fingerprint</th><th>Conta</th></tr></thead>
             <tbody>
-              {fingerprintsSuspeitos.map((f) => (
+              {fingerprintsSuspeitos.map((f: any) => (
                 <tr key={f.profile_id}>
                   <td>{f.fingerprint.slice(0, 10)}...</td>
                   <td>{f.profiles?.display_name ?? f.profiles?.email}</td>

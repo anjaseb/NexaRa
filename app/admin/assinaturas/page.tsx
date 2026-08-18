@@ -20,7 +20,7 @@ export default async function AssinaturasPendentesPage() {
       <table>
         <thead><tr><th>Usuário</th><th>Plano</th><th>Pedido em</th><th></th></tr></thead>
         <tbody>
-          {pendentes?.map((s) => (
+          {pendentes?.map((s: any) => (
             <tr key={s.id}>
               <td>{s.profiles?.display_name ?? s.profiles?.email}</td>
               <td>{s.plan_kz} Kz</td>
