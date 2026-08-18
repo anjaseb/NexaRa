@@ -16,11 +16,13 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '22'
 
       - name: Instalar dependências
         run: npm install
+
+      - name: Debug ffmpeg-installer
+        run: ls -la node_modules/@ffmpeg-installer/ || echo "pasta não existe"
 
       - name: Build do Next.js
         run: npm run build
