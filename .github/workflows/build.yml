@@ -20,7 +20,7 @@ jobs:
           cache: 'npm'
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm install
 
       - name: Build do Next.js
         run: npm run build
